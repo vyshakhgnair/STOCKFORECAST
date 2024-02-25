@@ -1,0 +1,106 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    .head {
+        height: 100%;
+        width: 100%;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/static/bg.jpg);
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .search-container {
+        height: 10%;
+        width: 50.5%;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        margin: 4% auto;
+        padding: 1.5%;
+    }
+    
+    .head h1 {
+        color: #fff;
+        text-align: center;
+        font-family: Georgia;
+        padding: 5%;
+    }
+    
+    nav {
+        background-color: #fff;
+        border-radius: 50px;
+        padding: .1%;
+    }
+    
+    nav ul li {
+        list-style: none;
+        display: inline-block;
+        padding: 13px 35px;
+        margin: 10px;
+        font-size: 100%;
+        font-weight: 500;
+        color: #777;
+        cursor: pointer;
+        position: relative;
+        z-index: 2;
+        transition: color 0.5s;
+    }
+    
+    nav ul li::after {
+        content: '';
+        background: linear-gradient(to right, #ff105f, #ffad06);
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+        opacity: 0;
+        transition: top 0.5s, opacity 0.5s;
+    }
+    
+    nav ul li:hover {
+        color: #fff;
+    }
+    
+    nav ul li:hover::after {
+        top: 50%;
+        opacity: 1;
+    }
+    
+    .search {
+        background-color: #fff;
+        border-radius: 100px;
+        width: 800px;
+        padding: 20px;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        transform: translateX(-30%);
+    }
+    
+    .search-btn {
+        background-color: #fff;
+        border-radius: 100px;
+        width: 200px;
+        padding: 20px;
+        font-size: 20px;
+        justify-content: center;
+        margin-left: 100%;
+        margin-top: -10px;
+        margin-bottom: 0px;
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(100%,3%);
+    }

@@ -1,0 +1,59 @@
+<!-- result.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Result</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='result.css') }}">
+</head>
+
+<body onload="myFunction()" style="margin:0;">
+
+    <div id="loader"></div>
+
+    <div class="header">
+        <h1>StockForecast</h1>
+
+        <div class="content">
+            <div class="left-content">
+                <h2>Predicted Prices:</h2>
+                <ul>
+                    {% for price in pred_price %}
+                    <li>{{ price }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="right-content">
+                <h2>Evaluation Metrics:</h2>
+                <p>RMSE: {{ rmse_score }}</p>
+            </div>
+        </div>
+
+        <div class="image-container">
+            <img src="{{ image_urls[0] }}" width="400" height="200" style="vertical-align:middle;margin:10px 400px" alt="Image 1">
+            <img src="{{ image_urls[1] }}" width="400" height="200" style="vertical-align:middle;margin:10px 400px" alt="Image 2">
+            <img src="{{ image_urls[2] }}" width="400" height="200" style="vertical-align:middle;margin:10px 400px" alt="Image 3">
+        </div>
+
+        <div class="footer">
+            <div class="footer-content"></div>
+            <div class="footer-content"></div>
+        </div>
+    </div>
+
+    <script>
+        var myVar;
+
+        function myFunction() {
+            myVar = setTimeout(showPage, 3000);
+        }
+
+        function showPage() {
+            document.getElementById("loader").style.display = "none";
+            document.getElementById("myDiv").style.display = "block";
+        }
+    </script>
+
+</body>
+
+</html>

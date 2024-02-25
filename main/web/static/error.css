@@ -1,0 +1,25 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.err
+{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(/static/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    align-items: center;
+}  
+
+.err h1
+{
+    color: #fff;
+    text-align: center;
+    font-family: Georgia;
+    padding: 20%;
+}

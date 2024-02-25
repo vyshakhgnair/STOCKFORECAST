@@ -1,0 +1,122 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.logreg_form
+{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(/static/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    align-items: center;
+}  
+
+.logreg_form h1
+{
+    color: #fff;
+    text-align: center;
+    font-family: Georgia;
+}
+
+.form-box
+{
+    width: 24%;
+    height: 64%;
+    position: relative;
+    margin: 3% auto;
+    background: #fff;
+    padding: 2%;
+    overflow: hidden;
+    border-radius: 2.5%;
+}
+
+.button-box
+{
+    width: 65%;
+    margin: 5% auto;
+    position: relative;
+    box-shadow: 0 0 4% 2% #ff61241f;
+    border-radius: 4%;
+}
+
+.toggle-btn
+{
+    padding: 5% 13%;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+}
+
+#btn
+{
+    top: 0;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, #ff105f, #ffad06);
+    border-radius: 30px;
+    transition: .5s;
+}
+
+.input-group
+{
+    top: 30%;
+    position: absolute;
+    width: 70%;
+    transition: .5s;
+}
+
+.input-field
+{
+    border-radius: 20px;
+    padding: 4%;
+    margin: 4% 0;
+    width: 100%;
+    border: 1px solid #999;
+    outline: none;
+    text-align: center;
+    box-shadow: 0 0 20px 9px #3c37371f;
+}
+
+.login-btn
+{
+    width: 55%;
+    padding: 5% 15%;
+    cursor: pointer;
+    display: block;
+    margin: 7% auto;
+    background: linear-gradient(to right, #ff105f, #ffad06);
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+
+.register-btn
+{
+    width: 55%;
+    padding: 5% 15%;
+    cursor: pointer;
+    display: block;
+    margin: 5% auto;
+    background: linear-gradient(to right, #ff105f, #ffad06);
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+
+#login
+{
+    left: 10%;
+}
+
+#register
+{
+    left: 100%;
+}

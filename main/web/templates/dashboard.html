@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='dashboardstyle.css') }}">
+</head>
+
+<body>
+    <div class="head">
+        <h1>StockForecast</h1>
+        <div class="search-container">
+            <form action="/search" method="POST">
+                <input type="text" class="search" placeholder="Enter stock name..." name="search">
+                <button type="submit" class="search-btn">Search</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

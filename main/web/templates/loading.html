@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='loading.css') }}">
+    <style>
+        #myDiv {
+            display: none;
+            text-align: center;
+        }
+    </style>
+
+    <script>
+        // Periodically check the model training status
+        setInterval(function() {
+            fetch('/status')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.model_trained) {
+                        // Redirect to the result page
+                        window.location.href = '/result';
+                    }
+                })
+                .catch(error => console.error(error));
+        }, 3000); // Check every 3 seconds
+    </script>
+
+</head>
+
+<body>
+    <div class="ring">Loading
+        <span></span>
+    </div>
+
+    <body>
+        <div class="message-container">
+            <p>Processing...</p>
+            <p>Loading results...</p>
+            <p>Analyzing stock...</p>
+        </div>
+    </body>
+</body>
+
+
+</html>
